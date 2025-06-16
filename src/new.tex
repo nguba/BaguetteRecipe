@@ -1,0 +1,284 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{microtype} % Improved typography
+
+% Color definitions
+\definecolor{headerblue}{RGB}{31,73,125}
+\definecolor{lightgray}{RGB}{245,245,245}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{headerblue}{\textbf{Professional Baguette Formula}}}
+\lfoot{\textcolor{headerblue}{Cold Bulk Fermentation Method}}
+\rfoot{\textcolor{headerblue}{\textbf{\thepage}}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{headerblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{headerblue}\leaders\hrule height \footrulewidth\hfill}}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{headerblue}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{headerblue}}{\thesubsection}{1em}{}
+
+% Table formatting
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% Reduce line spacing in lists
+\setlist{itemsep=2pt,parsep=0pt,topsep=4pt}
+
+% Custom environments
+\newtcolorbox{criticalbox}{
+    colback=red!5!white,
+    colframe=red!75!black,
+    title=Critical Timing,
+    fonttitle=\bfseries
+}
+
+\newtcolorbox{tipbox}{
+    colback=blue!5!white,
+    colframe=headerblue,
+    title=Professional Tip,
+    fonttitle=\bfseries
+}
+
+\begin{document}
+
+    \title{\textcolor{headerblue}{\textbf{Professional Baguette Formula}}\\
+    \large\textcolor{headerblue}{Cold Bulk Fermentation Method with Temperature Controls}}
+    \author{}
+    \date{}
+    \maketitle
+
+    \begin{center}
+        \textit{Yield: 3 baguettes × 288g = 864g finished product (2\% bake loss)}
+    \end{center}
+
+    \section{Baker's Percentages}
+
+    \subsection{Poolish (Day 1)}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{@{}lcc@{}}
+            \toprule
+            \textbf{Ingredient}    & \textbf{Weight (g)} & \textbf{Baker's \%} \\
+            \midrule
+            T55 Flour              & 100                 & 20.0\%              \\
+            Water                  & 120                 & 24.0\%              \\
+            Instant Yeast          & 0.5                 & 0.10\%              \\
+            \midrule
+            \textbf{Poolish Total} & \textbf{220.5}      & \textbf{44.10\%}    \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    \subsection{Final Dough}
+    \begin{table}[h]
+        \centering
+        \rowcolors{2}{lightgray}{white}
+        \begin{tabular}{@{}lS[table-format=3.1]S[table-format=3.2]@{}}
+            \toprule
+            \textbf{Ingredient} & {\textbf{Weight (g)}} & {\textbf{Baker's \%}} \\
+            \midrule
+            T55 Flour & 500.0 & 100.00 \\
+            Water (total) & 350.0 & 70.00 \\
+            Salt & 10.0 & 2.00 \\
+            Instant Yeast & 4.5 & 0.90 \\
+            Poolish & 220.5 & 44.10 \\
+            \midrule
+            \textbf{Total Dough Weight} & \textbf{1085.0} & \textbf{216.10} \\
+            \bottomrule
+        \end{tabular}
+        \caption{Final dough composition}
+    \end{table}
+
+    \subsection{Component Breakdown}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Flour (total):} 500g (100\%)
+        \item \textbf{Water (total):} 350g (70\%)
+        \item \textbf{Poolish contribution:} Flour 100g (20\%), Water 120g (24\%)
+        \item \textbf{Final dough addition:} Flour 400g, Water 230g
+    \end{itemize}
+
+    \section{Temperature Control Matrix}
+
+    \begin{table}[h]
+        \centering
+        \small
+        \rowcolors{2}{lightgray}{white}
+        \begin{tabular}{@{}cccccc@{}}
+            \toprule
+            \textbf{Ambient Temp} & \textbf{Poolish Time} & \textbf{Water Temp} & \textbf{Pre-Bulk} & \textbf{Cold Retard} & \textbf{Proof} \\
+            \midrule
+            15--17°C & 18--20h & 32--35°C & 3.0--4.0h & 18--36h & 90--120min \\
+            18--20°C & 16--18h & 28--30°C & 2.5--3.0h & 18--24h & 75--90min \\
+            21--23°C & 14--16h & 24--26°C & 2.0--2.5h & 12--24h & 60--75min \\
+            24--26°C & 12--14h & 20--22°C & 1.5--2.0h & 12--18h & 45--60min \\
+            \bottomrule
+        \end{tabular}
+        \caption{Temperature-dependent timing adjustments}
+    \end{table}
+
+    \section{Production Schedule}
+
+    \subsection{Day 1: Poolish Development}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Time:} T-0 (based on ambient temperature)
+        \item \textbf{Storage:} Bowl covered with damp towel (allows gas exchange, prevents skinning)
+        \item \textbf{Location:} Counter away from drafts, consistent room temperature
+        \item \textbf{Target DDT:} 21--23°C
+        \item \textbf{Maturity indicators:} Surface bubbles, slight dome, beginning recession
+        \item \textbf{Aroma profile:} Wine-like, mild acetic notes
+    \end{itemize}
+
+    \begin{tipbox}
+        \textbf{Avoid:} Sealed containers (CO₂ buildup), dry towels (surface skinning), uncovered (drying)
+    \end{tipbox}
+
+    \subsection{Day 2: Dough Development \& Cold Retard}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Mixing method:} Modified improved mix
+        \item \textbf{Target DDT:} 24--25°C (calculated from ambient temp table)
+        \item \textbf{Autolyse:} 30--45 minutes (flour + water + poolish only)
+        \item \textbf{Mix development:} 4--6 minutes hand kneading to smooth stage
+        \item \textbf{Bulk fermentation:} Pre-fridge ambient temperature (see matrix)
+        \item \textbf{Fold schedule:} 3--4 folds at 30--45 minute intervals
+        \item \textbf{Cold retard:} 4°C for duration per temperature matrix
+    \end{itemize}
+
+    \subsection{Day 3: Make-up \& Bake}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Scaling:} 3 units × 288g each
+        \item \textbf{Pre-shape:} Minimal degassing, gentle handling
+        \item \textbf{Bench rest:} None (cold bulk method)
+        \item \textbf{Final shape:} Baguette, 40--45cm length
+        \item \textbf{Final proof:} Ambient temperature per matrix
+        \item \textbf{Proof test:} Finger poke --- slow partial rebound
+    \end{itemize}
+
+    \section{Baking Parameters}
+
+    \subsection{Oven Setup}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Preheat temperature:} 300°C (maximum) with baking metal on top shelf
+        \item \textbf{Baking position:} Move metal plate to bottom/lower-middle shelf before loading
+        \item \textbf{Deck temperature:} 260°C initial
+        \item \textbf{Steam system:} Lava rock method
+        \item \textbf{Preheating time:} 60+ minutes minimum
+        \item \textbf{Loading method:} Parchment transfer
+    \end{itemize}
+
+    \subsection{Baking Profile}
+    \begin{longtable}{@{}lccll@{}}
+        \toprule
+        \textbf{Stage} & \textbf{Duration} & \textbf{Temperature} & \textbf{Steam} & \textbf{Notes} \\
+        \midrule
+        \endfirsthead
+        \toprule
+        \textbf{Stage} & \textbf{Duration} & \textbf{Temperature} & \textbf{Steam} & \textbf{Notes} \\
+        \midrule
+        \endhead
+        \rowcolor{lightgray}
+        Initial & 4 min & 280°C (535°F) & Maximum & Steam generation phase \\
+        Development & 7 min & 250°C (480°F) & Maintain & Oven spring period \\
+        \rowcolor{lightgray}
+        Steam release & 1 min & 250°C (480°F) & Remove & \textbf{Critical transition} \\
+        Crust formation & 10 min & 230°C (450°F) & None & Color development \\
+        \rowcolor{lightgray}
+        Final browning & 5 min & 210°C (410°F) & None & Deep color development \\
+        \bottomrule
+        \caption{Baking temperature and steam profile}
+    \end{longtable}
+
+    \begin{criticalbox}
+        \textbf{Steam release timing is critical:} Remove steam source exactly at 12 minutes to prevent soggy crust development.
+    \end{criticalbox}
+
+    \subsection{Quality Standards}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Scoring:} 15° angle, 3--5 cuts, overlapping by ⅓
+        \item \textbf{Oven spring:} 30--40\% volume increase
+        \item \textbf{Crust color:} Deep golden brown
+        \item \textbf{Internal temperature:} 96--99°C
+        \item \textbf{Cooling time:} Minimum 60 minutes
+    \end{itemize}
+
+    \section{Scaling Formula}
+
+    \textbf{To scale recipe:}
+    \begin{itemize}[leftmargin=*]
+        \item Multiply all weights by desired factor
+        \item Maintain baker's percentages
+        \item Adjust timing based on total dough weight:
+        \begin{itemize}
+            \item 50\% scale: Reduce timing by 10--15\%
+            \item 200\% scale: Increase timing by 15--20\%
+        \end{itemize}
+    \end{itemize}
+
+    \section{Quality Control Points}
+
+    \subsection{Poolish Assessment}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{pH target:} 3.8--4.2 (if testing)
+        \item \textbf{Specific gravity:} Slight decrease from initial
+        \item \textbf{Visual:} Peaked and beginning to recede
+    \end{itemize}
+
+    \subsection{Dough Development}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Gluten window:} Minimal required (time develops structure)
+        \item \textbf{Temperature monitoring:} Critical for fermentation control
+        \item \textbf{Fold response:} Dough should strengthen with each fold
+    \end{itemize}
+
+    \subsection{Final Product}
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Crumb structure:} Open, irregular holes
+        \item \textbf{Crust quality:} Thin, crispy, well-developed ears
+        \item \textbf{Flavor profile:} Complex, mild acidity, wheat sweetness
+        \item \textbf{Texture:} Chewy crumb, crackling crust
+    \end{itemize}
+
+    \section{Technique}
+
+    \subsection{Scoring (Just Before Baking)}
+    \textbf{Equipment:} Use a lame (curved razor blade holder) or very sharp knife. The blade should be held at a shallow angle (about 30°) with the surface of the loaf, about 0.6cm/¼ inch deep.
+
+    \begin{itemize}[leftmargin=*]
+        \item Make 3--5 diagonal slashes across each baguette, overlapping slightly (about ⅓ overlap)
+        \item Cut swiftly and confidently in one smooth motion --- hesitation causes tearing
+        \item Each slash should be about 10--13cm (4--5 inches) long
+        \item The shallow angle creates the classic ``ear'' that opens during baking
+    \end{itemize}
+
+    \begin{criticalbox}
+        Score just before loading into the oven --- timing is crucial for proper ear development.
+    \end{criticalbox}
+
+    \subsection{Baking Process with Lava Rocks}
+    \textbf{Setup (45--60 minutes before baking):}
+    \begin{itemize}[leftmargin=*]
+        \item Place thick metal plate on bottom shelf
+        \item Put lava rocks in heavy pan on oven floor or lowest shelf
+        \item Preheat to 250--280°C
+    \end{itemize}
+
+    \begin{tipbox}
+        For reference on advanced scoring techniques, see: \href{https://www.weekendbakery.com/posts/bread-scoring-with-confidence/}{Bread scoring with confidence – Weekend Bakery}
+    \end{tipbox}
+
+\end{document}
